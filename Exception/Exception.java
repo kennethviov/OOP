@@ -13,6 +13,7 @@ public class Exception {
          switch (choice) {
             case 1:
                Rectangle rect = new Rectangle(0.0, 0.0);
+               
                int encapchoice;
                do {
                   encapmenu();
@@ -35,8 +36,53 @@ public class Exception {
                } while (encapchoice != 0);
                break;
             case 2:
+               Shape c = new Circle(0.0);
+               Shape s = new Square(0.0);
+               
+               int inherchoice;
+               do {
+                  inhermenu();
+                  inherchoice = scan.nextInt();
+                  
+                  switch (inherchoice) {
+                     case 1:
+                        break;
+                     case 2:
+                        break;
+                     case 3:
+                        break;
+                     case 4:
+                        break;
+                     case 0:
+                        break;
+                     default:
+                        break;
+                  }
+               } while (inherchoice != 0);
                break;
             case 3:
+               Payment crdt = new CreditCardPayment(00000, "John", );
+               
+               int inherchoice;
+               do {
+                  inhermenu();
+                  inherchoice = scan.nextInt();
+                  
+                  switch (inherchoice) {
+                     case 1:
+                        break;
+                     case 2:
+                        break;
+                     case 3:
+                        break;
+                     case 4:
+                        break;
+                     case 0:
+                        break;
+                     default:
+                        break;
+                  }
+               } while (inherchoice != 0);
                break;
             case 4:
                break;
@@ -64,5 +110,9 @@ public class Exception {
       System.out.println("[3] Calculate Area");
       System.out.println("[4] Calculate Perimeter");
       System.out.println("[0] Back to Main Menu");
+   }
+   
+   static void inhermenu() {
+      
    }
 }
