@@ -1,0 +1,3 @@
+class InsufficientStockException extends RuntimeException {
+   
+}
