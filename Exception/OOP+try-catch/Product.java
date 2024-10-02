@@ -50,7 +50,7 @@ public class Product {
 
     // other methods
     public void updateStock(int amount) throws Exception {
-        if ((quantity + amount) > -1) {
+        if ((quantity + amount) >= 0) {
             quantity += amount;
             System.out.println("Stock updated: " + productName + "new quantity is " + quantity + ".");
         } else 
