@@ -9,3 +9,9 @@ class InvalidQuantityException extends RuntimeException {
         super(message);
     }
 }
+
+class ProductNotFoundException extends RuntimeException {
+   public ProductNotFoundException(String message) {
+       super(message);
+   }
+}
