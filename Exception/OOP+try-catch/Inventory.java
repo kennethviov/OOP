@@ -17,18 +17,25 @@ class Inventory implements InventoryOperation {
 
     @Override
     public void removeProduct(String productId) {
+        boolean found = false;
+        
         for (int i = 0; i < list.size(); i++) {
             if (list.get(i).getProductId().equals(productId)) {
                 list.remove(i);
                 System.out.println("Product " + productId + " removed successfully.");
+                found = true;
                 break;
             }
         }
+        
+        if (found == false)
+            throw new ProductNotFoundException("Product "+ productId +" not found.");
     }
 
     @Override
     public void displayInventory() {
         System.out.println("\nCurrent Inventory:");
+        System.out.println("====================");
         for (Product product : list) {
             System.out.println(
                 "\nProduct Name: " + product.getProductName() + 
@@ -36,14 +43,6 @@ class Inventory implements InventoryOperation {
                 "\nProduct ID: "   + product.getProductId() + 
                 "\nQuantity: "     + product.getQuantity());
         }
-    }
-    
-    public Product getProduct(String productId) {
-        for (int i = 0; i < list.size(); i++) {
-            if (list.get(i).getProductId().equals(productId)) {
-                return list.get(i);
-            }
-        }
-        throw new ProductNotFoundException("Product not found.");
+        System.out.println("====================");
     }
 }
