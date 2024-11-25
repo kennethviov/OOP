@@ -20,7 +20,7 @@ public class Main {
 
         JFrame frame = new JFrame("Log In");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(250, 300);
+        frame.setSize(250, 200);
         frame.setResizable(false);
 
         frame.setLayout(new FlowLayout(FlowLayout.CENTER, 10, 10));
