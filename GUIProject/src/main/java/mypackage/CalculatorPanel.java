@@ -249,7 +249,7 @@ class CalculatorPanel extends JPanel implements ActionListener{
         // *Equal Button
 
         if (e.getSource() == equButton) {
-            num2 = Double.parseDouble(mainTextField.getText());
+            num2 = Double.parseDouble(deformatNumber(mainTextField.getText()));
             calculateResult();
             operator = '\u0000';
             ispressed = true;
